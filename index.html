@@ -1,11 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist - Chandan Singh</title>
+    <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/css/bootstrap-utilities.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .height-full {
+            height: 100% !important;
+        }
+
+        .name {
+            font-size: 7rem;
+            font-weight: 100;
+            overflow: hidden;
+            transition: .5s ease;
+        }
+
+        .name span {
+            z-index: 100;
+            color: rgba(255, 255, 255, 0.478);
+
+
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 100px white;
+            z-index: -100;
+            background-color: rgb(255, 0, 0);
+            /* transition: 2s; */
+            /* filter: drop-shadow(0 0px 100px rgb(255, 255, 255)); */
+        }
+
+        #C {
+            font-weight: bold !important;
+        }
+
+        #D {
+            font-weight: bold !important;
+        }
+
+        #N1 {
+            font-weight: bold !important;
+        }
+
+        .nav {
+            width: 20%;
+            height: 100px;
+            position: absolute;
+            bottom: 10%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid white; */
+            gap: 20px;
+        }
+
+        .link {
+            border-radius: 4px;
+            font-size: 20px;
+            transition: .2s;
+            cursor: pointer;
+        }
+
+        .link:hover {
+            font-size: 25px;
+        }
+
+        .bxl-youtube:hover {
+            color: red;
+        }
+
+        .bxl-instagram:hover {
+            color: rgb(232, 51, 51);
+        }
+
+        .bxl-facebook-circle:hover {
+            color: rgb(51, 63, 232);
+        }
+
+        .bxl-spotify:hover {
+            color: rgb(0, 197, 0);
+        }
+
+        .bxl-gmail:hover {
+            color: rgb(255, 200, 3);
+        }
+
+        @media screen and (max-width: 768px) {
+            .name {
+                font-size: 3rem;
+                font-weight: 100;
+                line-height: 70px;
+            }
+
+            .nav {
+                width: 80%;
+                bottom: 5%;
+            }
+
+            .flash {
+                width: 5px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .flash {
+            width: 50px;
+            height: 140%;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.132);
+            transform: rotate(12deg);
+            left: -100%;
+            bottom: 120%;
+            transition: 1s;
+        }
+
+        .name:hover {
+            filter: drop-shadow(0 0 10px white);
+        }
+        .book{
+            color: gray;
+            position: absolute;
+            border: 1px solid gray;
+            padding: 7px 15px;
+            bottom: 30%;
+            border-radius: 4px;
+        }
+        .book:hover {
+            background-color: rgba(255, 255, 255, 0.397);
+            color: black;
+        }
+
+        .book-link {
+            cursor: pointer;
+        }
+        body{
+            background-image: url('https://images.unsplash.com/photo-1620577610365-86c411bad78d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            /* background-image: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+            /* background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: 2s;
+            backdrop-filter: blur(2px);
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello World!</h1>
+
+<body class="bg-dark">
+    <div class="d-flex justify-content-center align-items-center flex-column height-full">
+        <div class="name">
+            <span id="C">C</span>
+            <span id="H">H</span>
+            <span id="A">A</span>
+            <span id="N">N</span>
+            <span id="D">D</span>
+            <span id="A1">A</span>
+            <span id="N1">N</span>
+            <div class="flash"></div>
+        </div>
+        <div class="nav">
+            <span class="link"><a href="https://www.facebook.com/wannafun.0/" target="_blank"
+                    rel="noopener noreferrer"><i class='bx bxl-facebook-circle'></i></a></span>
+            <span class="link"><a href="mailto:singh963130@gmail.com"><i class='bx bxl-gmail'></i></a></span>
+            <span class="link"><a href="https://www.instagram.com/chandan.musician/" target="_blank"
+                    rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a></span>
+            <span class="link"><a href="https://www.youtube.com/@_chandan_singh" target="_blank"
+                    rel="noopener noreferrer"><i class='bx bxl-youtube'></i></a></span>
+            <span class="link"><a href="#"><i class='bx bxl-spotify'></i></a></span>
+        </div>
+        <div class="book">
+            <span class="book-link">
+                Book An Event
+            </span>
+        </div>
+        <span class="position-absolute circle rounded-circle"></span>
+    </div>
+
+    <script src="./dist/js/bootstrap.bundle.js"></script>
+    <script src="./dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./dist/js/bootstrap.js"></script>
+    <script src="./dist/js/jq.js"></script>
+    <script src="./pointer.js"></script>
 </body>
+
 </html>
